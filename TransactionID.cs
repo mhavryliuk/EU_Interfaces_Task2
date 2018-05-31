@@ -2,8 +2,14 @@
 {
     static class TransactionID
     {
-        // Поля для сопоставления отработанных классов и методов
+        /// <summary>
+        /// Fields for comparing the worked classes.
+        /// </summary>
         public static int idClass = 1;
+
+        /// <summary>
+        /// Fields for comparing the worked methods.
+        /// </summary>
         public static int idOperation = 1;
     }
 }

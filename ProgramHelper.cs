@@ -2,14 +2,23 @@
 
 namespace _20180313_Task2
 {
-    class ProgramHelper : ProgramConverter, ICodeChecker
+    internal class ProgramHelper : ProgramConverter, ICodeChecker
     {
+        /// <inheritdoc />
+        /// <summary>
+        /// A constructor that provides information on the involved classes and ID for a binding to operations.
+        /// </summary>
         public ProgramHelper()
         {
-            Console.WriteLine("Класс ProgramHelper");
+            Console.WriteLine("Class ProgramHelper");
         }
 
-        // Принимаем результаты выполнения методов ConvertToCSharp / ConvertToVB и конечный язык для проверки
+        /// <summary>
+        /// The CodeCheckSyntax() method verifies the correctness of converting one programming language to another.
+        /// </summary>
+        /// <param name="verificationString">The result of converting one programming language to another.</param>
+        /// <param name="languageUsed">A verifiable programming language.</param>
+        /// <returns>The result of the correct conversion - true or false.</returns>
         public bool CodeCheckSyntax(string verificationString, string languageUsed)
         {
             switch (languageUsed)

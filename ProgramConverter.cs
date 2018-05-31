@@ -2,16 +2,24 @@
 
 namespace _20180313_Task2
 {
-    class ProgramConverter : IConvertible
+    /// <inheritdoc />
+    internal class ProgramConverter : IConvertible
     {
-        // Информация о задействованных классах и ID для привязки к операциям 
+        /// <summary>
+        /// A constructor that provides information on the involved classes and ID for a binding to operations.
+        /// </summary>
         public ProgramConverter()
         {
             Console.WriteLine("\nId {0}:", TransactionID.idClass++);
-            Console.WriteLine("Класс ProgramConverter");
+            Console.WriteLine("Class ProgramConverter");
         }
 
-        // Конвертация кода VB в C#
+        /// <inheritdoc />
+        /// <summary>
+        /// The ConvertToCSharp() method converts the VB code to a C# code.
+        /// </summary>
+        /// <param name="textOnVB">VB programming language code.</param>
+        /// <returns>The message about the completion of the conversion.</returns>
         public virtual string ConvertToCSharp(string textOnVB)
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
@@ -19,7 +27,12 @@ namespace _20180313_Task2
             return $"конвертация [{textOnVB}] в C#";
         }
 
-        // Конвертация кода C# в VB
+        /// <inheritdoc />
+        /// <summary>
+        /// The ConvertToCSharp() method converts the C# code to a VB code.
+        /// </summary>
+        /// <param name="textOnCSharp">C# programming language code.</param>
+        /// <returns>The message about the completion of the conversion.</returns>
         public virtual string ConvertToVB(string textOnCSharp)
         {
             Console.ForegroundColor = ConsoleColor.DarkGreen;
